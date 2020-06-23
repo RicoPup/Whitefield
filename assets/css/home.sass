@@ -1,11 +1,111 @@
-.home-container
+.container
   width: 100%
-  background: #ccc
-  text-align: center
+  height: 1080px
   padding: 20px
+  position: relative
   display: flex
   flex-direction: column
-  border-bottom: solid 3px #ff8330
+  justify-content: flex-start
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.vocals-container
+  background-image: url("../images/Piano-white-background.jpg")
+  .card
+
+    &:hover
+      box-shadow: 0 20px 20px 0 rgba(0,0,0,1)
+
+    h2
+      margin-top: 30px
+
+  .contact-card
+    text-align: center
+    width: 600px
+    height: 100px
+    margin: 20px 30px 20px 30px
+    border-radius: 5px
+    background: #dfdfdf
+    opacity: 0.5
+    transition-duration: 0.5s
+    &:hover, &:focus
+      box-shadow: 0 10px 10px 0 rgba(0,0,0,1)
+      transform: scale3d(1.006, 1.006, 1)
+      opacity: 0.8
 
   h1
-    font-family: "BIZ UDMincho Medium"
+    padding: 10px
+    margin: 0 30px 0 30px
+    border-bottom: solid 2px #222222
+
+.card-container
+  display: flex
+
+.btn-cont
+  a
+    text-decoration: none
+
+
+
+  .btn
+    text-transform: uppercase
+    color: white
+    text-align: center
+    letter-spacing: 1px
+    font-size: 20px
+    width: 660px
+    height: 45px
+    background-color: #000000
+    position: relative
+    overflow: hidden
+    border-radius: 5px
+    border-width: 1px
+    border-style: solid
+    margin: 20px 30px 20px 30px
+
+    span
+      display: block
+      margin-top: 12px
+
+
+    &:before
+      content: ""
+      display: block
+      width: 0
+      height: 0
+      border-top: 27px solid transparent
+      border-bottom: 27px solid transparent
+      border-right: 27px solid #dfdfdf
+      position: absolute
+      bottom: -37%
+      left: -1px
+      transform: rotate(-45deg) translateX(-50px)
+
+      transition: transform 200ms ease
+
+
+    &:after
+      content: ""
+      display: block
+      width: 0
+      height: 0
+      border-top: 27px solid transparent
+      border-bottom: 27px solid transparent
+      border-right: 27px solid #dfdfdf
+      position: absolute
+      top: -37%
+      right: -2px
+      transform: rotate(135deg) translateX(-50px)
+
+      transition: transform 200ms ease
+
+
+    &:hover
+
+      &:before
+        transform: rotate(-45deg) translateX(0)
+
+
+      &:after
+        transform: rotate(135deg) translateX(0)

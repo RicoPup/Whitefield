@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block title %}Sign Up{% endblock %}
+{% block body %}
+    <div>
+        <form method="post">
+            <div>
+                <label for="email">Email:</label>
+                <input required type="text" id="email" name="email" maxlength="40"/>
+            </div>
+            <div>
+                <label for="username">Username:</label>
+                <input required type="text" id="username" name="username" maxlength="12"/>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input required type="password" id="password" name="password"/>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+{% endblock %}

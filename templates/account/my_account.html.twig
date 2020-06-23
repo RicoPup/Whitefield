@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {% include 'elements/header.html.twig' %}
+    <div>
+        <h1>My Account</h1>
+    </div>
+    <div>
+        <h2>Some stuff</h2>
+        <a href="{{ path('change-password') }}">Change Password</a>
+        {% for message in app.flashes('MESSAGE') %}
+            <div class="flash-notice">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -3,11 +3,38 @@
 {% block title %}Whitefield Music Studio{% endblock %}
 
 {% block body %}
-<div class="home-container">
-    <h1>Whitefield Music Studio</h1>
-
-    <div>
-        Professional Music Tuition.
+    {% include 'elements/header.html.twig' %}
+    <div class="container vocals-container">
+        <div class="card-container">
+            <div class="card">
+                <h1>
+                    Vocals
+                </h1>
+                <h2>
+                    Book a Lesson
+                </h2>
+                <h2>
+                    Resources
+                </h2>
+            </div>
+            <div class="card">
+                <h1>
+                    Piano
+                </h1>
+                <h2>
+                    Book a Lesson
+                </h2>
+                <h2>
+                    Resources
+                </h2>
+                <h2>
+                    (Link to something else)
+                </h2>
+            </div>
+        </div>
+        <div class="btn-cont">
+            <a href="{{path('new-page')}}"><div class="btn"><span>Get in touch</span></div></a>
+        </div>
+        <a href="{{ path('new-page') }}">New Page</a>
     </div>
-</div>
 {% endblock %}

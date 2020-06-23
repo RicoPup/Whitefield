@@ -46,7 +46,11 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     .enableVersioning(Encore.isProduction())
-    .enableSassLoader()
+    .configureFilenames({
+        js: '[name].js?[hash:16]',
+        css: '[name].css?[hash:16]',
+        images: 'images/[name].[ext]?[hash:16]',
+    })
 
     // enables @babel/preset-env polyfills
     .configureBabelPresetEnv((config) => {
@@ -54,8 +58,8 @@ Encore
         config.corejs = 3;
     })
 
-    // enables Sass/SCSS support
-    //.enableSassLoader()
+    //enables Sass/SCSS support
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -73,3 +77,4 @@ Encore
 ;
 
 module.exports = Encore.getWebpackConfig();
+

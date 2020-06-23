@@ -1,0 +1,25 @@
+<div class="header-main">
+    <div class="header-container">
+        <div class="title">
+            <a href="{{ path('home') }}"><h1>Whitefield Music Studio</h1></a>
+            <h4>Professional Music Tuition.</h4>
+        </div>
+        <div class="contact">
+            <a href="{{ path('new-page') }}">Contact</a>
+        </div>
+        <div class="account-bit">
+            {% if security.isLoggedIn %}
+                <div class="logout">
+                    <a href="{{ path('logout') }}">Logout</a>
+                </div>
+                <div class="my-account">
+                    <a href="{{ path('my_account') }}">{{security.getUserForTwig}}</a>
+                </div>
+            {% else %}
+                <div class="login">
+                    <a href="{{ path('login') }}">Login</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>

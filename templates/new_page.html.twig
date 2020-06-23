@@ -1,7 +1,55 @@
-<h1>New Page I Guess</h1>
+{% extends 'base.html.twig' %}
 
-<div>
-    <h2>Some heading</h2>
-    <h3>Smaller heading</h3>
-    <p>Some text</p>
-</div>
+{% block title %}New Page{% endblock %}
+
+{% block body %}
+    {% include 'elements/header.html.twig' %}
+    <div class="main-container">
+        <div class="border-container">
+            <div class=back-container>
+                <div class="texto fade-in">
+                    1
+                </div>
+            </div>
+        </div>
+        <div class="border-container">
+            <div class=back-container>
+                <div class="filler">
+                </div>
+            </div>
+        </div>
+        <div class="border-container">
+            <div class=strip-container id="strip-container">
+                <div class="strip-1">
+                    <div class="box">
+                        Consultation
+                    </div>
+                </div>
+                <div class="strip-2">
+                    <div class="box">
+                        Lessons
+                    </div>
+                </div>
+                <div class="strip-3">
+                    <div class="box">
+                        Practice
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border-container">
+            <div class=back-container>
+                <div class="filler">
+                </div>
+            </div>
+        </div>
+        <div class="border-container">
+            <div class=back-container>
+                <div class="texto fade-in">
+                    3
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

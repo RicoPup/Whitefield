@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %}Log In{% endblock %}
+{% block body %}
+    {% include 'elements/header.html.twig' %}
+    <div>
+        <form method="post">
+            <div>
+                <label for="username">Username:</label>
+                <input required type="text" id="username" name="username" maxlength="12"/>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input required type="password" id="password" name="password"/>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+{% endblock %}

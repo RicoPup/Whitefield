@@ -1,5 +1,32 @@
 @import "home.sass"
+@import "header-main"
+@import "new-page"
 
 body
-    background-color: lightgray
+    background-color: white
 
+*
+    font-family: "BIZ UDMincho Medium", fantasy
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    text-decoration: none
+
+.card
+    text-align: center
+    width: 300px
+    height: 300px
+    margin: 20px 30px 20px 30px
+    border-radius: 5px
+    background: #dfdfdf
+    opacity: 0.5
+    transition-duration: 0.5s
+    &:hover, &:focus
+        box-shadow: 0 10px 10px 0 rgba(0,0,0,1)
+        transform: scale3d(1.006, 1.006, 1)
+        opacity: 0.8
+
+    h1
+        padding: 10px
+        margin: 0 30px 0 30px
+        border-bottom: solid 2px #222222
